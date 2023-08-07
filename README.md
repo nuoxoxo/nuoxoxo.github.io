@@ -1,3 +1,7 @@
+[![Deploy to GitHub Pages](https://github.com/nuoxoxo/nuoxoxo.github.io/actions/workflows/static.yml/badge.svg)](https://github.com/nuoxoxo/nuoxoxo.github.io/actions/workflows/static.yml)
+
+<!--
+
 # Astro Starter Kit: Minimal
 
 ```
@@ -45,3 +49,5 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+-->
