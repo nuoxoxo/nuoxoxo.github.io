@@ -57,7 +57,7 @@
         return resColor
       }
 
-      const fontArray: string[] = [
+      const fonts = [
         "Arial",
         "Helvetica",
         "Times New Roman",
@@ -82,21 +82,50 @@
         "Constantia",
         "Calisto MT",
         "Cambria",
-        "Baskerville"
-      ]
+        "Baskerville",
+        "Franklin Gothic Medium",
+        "Century Gothic",
+        "Arial Black",
+        "Verdana",
+        "Courier",
+        "Brush Script MT",
+        "Cursive",
+        "Fantasy",
+        "Monospace",
+        "Sans-serif",
+        "Serif",
+        "Helvetica Neue",
+        "Arial Narrow",
+        "Copperplate Gothic",
+        "Futura",
+        "Century Schoolbook",
+        "Courier",
+        "Apple Chancery",
+        "Bodoni",
+        "Rockwell",
+        "Gill Sans",
+        "Eurostile",
+        "Univers",
+        "ITC Avant Garde Gothic"
+      ];
+
+console.log(fonts);
+
 
       const handleBtnColorChange = () => {
 
         const buttons = document.querySelectorAll('.btn')
         const resFont = fontArray[Math.floor((Math.random() * fontArray.length))]
         const resColor = colorRgbHexPair()
+        const resInvertedColor = invertColorHex(resColor[1])
         buttons.forEach(button => {
           button.style.fontFamily = resFont
+          button.style.backgroundColor = resInvertedColor
           button.addEventListener('mouseover', () => {
             button.style.backgroundColor = resColor[0]
           })
           button.addEventListener('mouseout', () => {
-            button.style.backgroundColor = ''
+            button.style.backgroundColor = resInvertedColor
           })
         })
       }
