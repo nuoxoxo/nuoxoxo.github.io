@@ -13,27 +13,114 @@
     />
   </head>
   <style>
-    @import './styles.css';
+    @import './styles.scss';
   </style>
   <body>
     <main>
       <div class="container">
         <div class="container btn-container">
           <button
-            class="btn btn-link"
-            onclick="location.href = 'https://nuoxoxo.github.io/coughing'"
+            class="btn btn-L"
+            onclick="location.href = 'https\://nuoxoxo.github.io/coughing'"
           >
-            1
+          L
           </button>
           <button
-            class="btn btn-link"
-            onclick="location.href = 'https://nuoxoxo.github.io/gig'"
+            class="btn btn-R"
+            onclick="location.href = 'https\://nuoxoxo.github.io/gig'"
           >
-            2
+          R
           </button>
         </div>
       </div>
     </main>
+    <script>
+
+      const intToHex = (code: number) => {
+
+        let hex = code.toString(16)
+        return hex.length === 1 ? "0" + hex : hex
+      }
+
+      const rgbToHex = (r: number, g: number, b: number) => {
+
+        return "#" + intToHex(r) + intToHex(g) + intToHex(b)
+      }
+
+      const colorRgbHexPair = () => {
+
+        let r = Math.floor(Math.random() * 256)
+        let g = Math.floor(Math.random() * 256)
+        let b = Math.floor(Math.random() * 256)
+        let res0 = `rgba(${r}, ${g}, ${b})`
+        let res1 = rgbToHex(r, g, b).toUpperCase()
+        return [res0, res1]
+      }
+
+      const invertColorHex = (hex: string) => {
+
+        const color = hex.startsWith("#") ? hex.slice(1) : hex
+        const max = 255
+        const r = max - parseInt(color.substr(0, 2), 16)
+        const g = max - parseInt(color.substr(2, 2), 16)
+        const b = max - parseInt(color.substr(4, 2), 16)
+        const res = "#" + [r, g, b].map(c => c.toString(16).padStart(2, "0")).join("")
+        return res
+      }
+
+      const fontArray: string[] = [
+        "Arial",
+        "Helvetica",
+        "Times New Roman",
+        "Georgia",
+        "Courier New",
+        "Verdana",
+        "Tahoma",
+        "Trebuchet MS",
+        "Comic Sans MS",
+        "Impact",
+        "Palatino Linotype",
+        "Book Antiqua",
+        "Lucida Sans Unicode",
+        "Lucida Console",
+        "Garamond",
+        "MS Sans Serif",
+        "MS Serif",
+        "Lucida Sans",
+        "Lucida Handwriting",
+        "Copperplate",
+        "Optima",
+        "Constantia",
+        "Calisto MT",
+        "Cambria",
+        "Baskerville"
+      ]
+
+      const handleBtnColorChange = () => {
+
+        const res = colorRgbHexPair()
+        const buttons = document.querySelectorAll('.btn')
+
+        buttons.forEach(button => {
+
+          // button.style.color = invertColorHex(res[1])
+          button.style.fontFamily = fontArray[Math.floor((Math.random() * fontArray.length))]
+
+          button.addEventListener('mouseover', () => {
+            
+            button.style.backgroundColor = res[0]
+          })
+
+          button.addEventListener('mouseout', () => {
+            button.style.backgroundColor = ''
+          })
+        })
+      }
+
+      handleBtnColorChange()
+      setInterval(handleBtnColorChange, 3000)
+
+    </script>
   </body>
 </astro>
 
