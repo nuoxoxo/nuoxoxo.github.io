@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link
-      rel="stylesheet"
+    <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
   </head>
@@ -19,36 +18,27 @@
     <main>
       <div class="container">
         <div class="container btn-container">
-          <button
-            class="btn btn-L"
+          <button class="btn btn-L"
             onclick="location.href = 'https\://nuoxoxo.github.io/coughing'"
-          >
-          L
-          </button>
-          <button
-            class="btn btn-R"
+          >L</button>
+          <button class="btn btn-R"
             onclick="location.href = 'https\://nuoxoxo.github.io/gig'"
-          >
-          R
-          </button>
+          >R</button>
         </div>
       </div>
     </main>
     <script>
 
       const intToHex = (code: number) => {
-
         let hex = code.toString(16)
         return hex.length === 1 ? "0" + hex : hex
       }
 
       const rgbToHex = (r: number, g: number, b: number) => {
-
         return "#" + intToHex(r) + intToHex(g) + intToHex(b)
       }
 
       const colorRgbHexPair = () => {
-
         let r = Math.floor(Math.random() * 256)
         let g = Math.floor(Math.random() * 256)
         let b = Math.floor(Math.random() * 256)
@@ -58,7 +48,6 @@
       }
 
       const invertColorHex = (hex: string) => {
-
         const color = hex.startsWith("#") ? hex.slice(1) : hex
         const max = 255
         const r = max - parseInt(color.substr(0, 2), 16)
@@ -99,12 +88,9 @@
       const handleBtnColorChange = () => {
 
         const buttons = document.querySelectorAll('.btn')
-
         const resFont = fontArray[Math.floor((Math.random() * fontArray.length))]
         const resColor = colorRgbHexPair()
-
         buttons.forEach(button => {
-
           button.style.fontFamily = resFont
           button.addEventListener('mouseover', () => {
             button.style.backgroundColor = resColor[0]
@@ -116,8 +102,7 @@
       }
 
       handleBtnColorChange()
-      setInterval(handleBtnColorChange, 3000)
-
+      setInterval(handleBtnColorChange, 2000)
     </script>
   </body>
 </astro>
