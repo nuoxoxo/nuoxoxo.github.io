@@ -64,8 +64,8 @@
         const r = max - parseInt(color.substr(0, 2), 16)
         const g = max - parseInt(color.substr(2, 2), 16)
         const b = max - parseInt(color.substr(4, 2), 16)
-        const res = "#" + [r, g, b].map(c => c.toString(16).padStart(2, "0")).join("")
-        return res
+        const resColor = "#" + [r, g, b].map(c => c.toString(16).padStart(2, "0")).join("")
+        return resColor
       }
 
       const fontArray: string[] = [
@@ -98,19 +98,17 @@
 
       const handleBtnColorChange = () => {
 
-        const res = colorRgbHexPair()
         const buttons = document.querySelectorAll('.btn')
+
+        const resFont = fontArray[Math.floor((Math.random() * fontArray.length))]
+        const resColor = colorRgbHexPair()
 
         buttons.forEach(button => {
 
-          // button.style.color = invertColorHex(res[1])
-          button.style.fontFamily = fontArray[Math.floor((Math.random() * fontArray.length))]
-
+          button.style.fontFamily = resFont
           button.addEventListener('mouseover', () => {
-            
-            button.style.backgroundColor = res[0]
+            button.style.backgroundColor = resColor[0]
           })
-
           button.addEventListener('mouseout', () => {
             button.style.backgroundColor = ''
           })
