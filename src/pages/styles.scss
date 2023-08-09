@@ -1,86 +1,88 @@
-body {
+$font-family: monospace, "Lucida Console", Courier;
+$border-width: 2px;
+$border-radius-l: 12%;
+$border-radius-r: 50%;
 
-  background-color: black;
-}
+//  define @mixins
 
-
-.container {
+@mixin container-styles
+{
 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(96vh - 3rem); // Ensure the container takes up the full viewport height
+  height: calc(96vh - 3rem);
   flex-wrap: wrap;
 }
 
+@mixin button-styles(
 
-.btn {
+$size: 256px,
+  $fontSize: 42px,
+  $borderRadius: 0
+)
+{
 
-  font-family: monospace, "Lucida Console", Courier;
-  // font-family: 'Ariel';
-  height: 256px;
-  width: 256px;
-  border: 2px;
-  margin: 2px;
+  font-family: $font-family;
+  height: $size;
+  width: $size;
+  border: $border-width;
+  margin: $border-width;
   text-align: center;
-  font-size: 42px;
+  font-size: $fontSize;
   user-select: none;
   cursor: pointer;
-  transition:
-    background-color 0.1s ease-in-out, border-color 0.1s ease-in-out; // Add transition property
-  border:
-    6px solid white;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  border: $border-width solid white;
+  border-radius: $borderRadius;
 }
 
+//  use mixins
 
-.btn-L {
-
-  border-radius: 12%;
+body
+{
+  background-color: black;
 }
 
-
-.btn-R {
-
-  border-radius: 50%;
+.container
+{
+  @include container-styles;
 }
 
+.btn
+{
+  @include button-styles(256px, 42px);
+}
 
-@media (max-width: 320px) {
-  .container {
+.btn-L
+{
+  @include button-styles(256px, 42px, $border-radius-l);
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: calc(96vh - 3rem); // Ensure the container takes up the full viewport height
-    flex-wrap: wrap;
-  }
-  .btn {
+.btn-R
+{
+  @include button-styles(256px, 42px, $border-radius-r);
+}
 
-    font-family: monospace, "Lucida Console", Courier;
-    // font-family: 'Ariel';
-    height: 128px;
-    width: 128px;
-    border: 2px;
-    margin: 2px;
-    text-align: center;
-    font-size: 21px;
-    user-select: none;
-    cursor: pointer;
-    transition:
-      background-color 0.1s ease-in-out, border-color 0.1s ease-in-out; // Add transition property
-    border:
-      6px solid white;
+@media (max-width: 320px)
+{
+  .container
+  {
+    @include container-styles;
   }
 
-
-  .btn-L {
-
-    border-radius: 12%;
+  .btn
+  {
+    @include button-styles(128px, 21px);
   }
 
-  .btn-R {
+  .btn-L
+  {
+    @include button-styles(128px, 21px, $border-radius-l);
+  }
 
-    border-radius: 50%;
+  .btn-R
+  {
+    @include button-styles(128px, 21px, $border-radius-r);
   }
 }
