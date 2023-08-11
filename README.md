@@ -1,4 +1,6 @@
-[![](https://github.com/nuoxoxo/nuoxoxo.github.io/actions/workflows/io.yml/badge.svg)](https://github.com/nuoxoxo/nuoxoxo.github.io/actions/workflows/io.yml)
+[![](https://github.com/nuoxoxo/nuoxoxo.github.io/actions/workflows/io.yml/badge.svg)](https://github.com/nuoxoxo/nuoxoxo.github.io/actions/workflows/io.yml) \
+[![Deploy](https://github.com/nuoxoxo/sneak/actions/workflows/dpl.yml/badge.svg)](https://github.com/nuoxoxo/sneak/actions/workflows/dpl.yml)
+
 
 <!--
 
