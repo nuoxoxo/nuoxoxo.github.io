@@ -1,0 +1,42 @@
+$WATER-GREEN: #23aeba;
+$CREAM-YELLO: #FFFDD0;
+$CREAM-WHITE: #FAEED5;
+$HOT-PINK: #EF7C8E;
+
+$TEXT-COLOR: $CREAM-WHITE;
+$BG-COLOR: #000000;
+
+body {
+  background-color: $BG-COLOR;
+  color: $TEXT-COLOR;
+}
+
+@keyframes rainbow-rotate {
+  from {
+    filter: hue-rotate(0deg);
+  } to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@mixin animation-rainbow-rotate {
+
+  color: $WATER-GREEN;
+  animation: rainbow-rotate 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#outer {
+  height: 88vh;
+  display: grid;
+  place-items: center;
+}
+
+#click-me {
+  font-size: 15vw;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  @include animation-rainbow-rotate;
+}
