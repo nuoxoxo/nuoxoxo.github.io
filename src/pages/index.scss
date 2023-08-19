@@ -25,7 +25,7 @@ body {
 
   animation: rainbow-rotate 5s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
+  // animation-direction: alternate;
 }
 
 @mixin margin-LR {
