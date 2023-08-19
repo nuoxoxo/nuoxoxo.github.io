@@ -4,10 +4,12 @@ $CREAM-WHITE: #FAEED5;
 $HOT-PINK: #EF7C8E;
 
 $TEXT-COLOR: $CREAM-WHITE;
+$FONT: Courier;
 $BG-COLOR: #000000;
 
 body {
   background-color: $BG-COLOR;
+  font-family: $FONT;
   color: $TEXT-COLOR;
 }
 
@@ -21,22 +23,51 @@ body {
 
 @mixin animation-rainbow-rotate {
 
-  color: $WATER-GREEN;
+  
   animation: rainbow-rotate 5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+@mixin margin-LR {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+@mixin click-me {
+  font-size: 10vw;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  @include animation-rainbow-rotate;
+}
+
+h1, h2 {
+  margin: 0;
 }
 
 #outer {
   height: 88vh;
   display: grid;
   place-items: center;
+  @include margin-LR;
 }
 
-#click-me {
-  font-size: 15vw;
-  cursor: pointer;
-  user-select: none;
-  white-space: nowrap;
-  @include animation-rainbow-rotate;
+.click-me {
+  @include click-me
+}
+
+#click-me-header {
+  color: $WATER-GREEN;
+}
+
+#click-me-gig {
+  color: $HOT-PINK;
+  font-size: 7vw;
+  @include click-me
+}
+
+#click-me-coughing {
+  color: $CREAM-YELLO;
+  @include click-me
 }
