@@ -80,7 +80,7 @@ h1, h2 {
   color: $TEAL-DEER;
   @include click-me;
   font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 23vh;
+  font-size: 19vh;
 }
 
 @media only screen and (max-width: 768px) {
@@ -96,10 +96,10 @@ h1, h2 {
   #click-me-gig {
     font-size: 13vh;
   }
-  #click-me-coughing {
-    font-size: 10vh;
-  }
   #click-me-nut {
-    font-size: 20vh;
+    font-size: 17vh;
+  }
+  #click-me-coughing {
+    font-size: 9vh;
   }
 }
