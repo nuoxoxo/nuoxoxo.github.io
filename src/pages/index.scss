@@ -1,6 +1,7 @@
 $WATER-GREEN: #23aeba;
 $CREAM-YELLO: #FFFDD0;
 $CREAM-WHITE: #FAEED5;
+$TEAL-DEER: #99E6B3;
 $HOT-PINK: #EF7C8E;
 
 $TEXT-COLOR: $CREAM-WHITE;
@@ -66,7 +67,13 @@ h1, h2 {
 }
 
 #click-me-coughing {
-  font-size: 23px;
+  // font-size: 23px;
   color: $CREAM-YELLO;
+  @include click-me
+}
+
+#click-me-nut {
+  // font-size: 23px;
+  color: $TEAL-DEER;
   @include click-me
 }
