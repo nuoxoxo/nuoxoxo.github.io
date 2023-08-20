@@ -79,8 +79,8 @@ h1, h2 {
 #click-me-nut {
   color: $TEAL-DEER;
   @include click-me;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 19vh;
+  font-family:'Courier New', monospace
+  font-size: 18.5vh;
 }
 
 @media only screen and (max-width: 768px) {
