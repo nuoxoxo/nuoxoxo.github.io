@@ -65,7 +65,7 @@ h1, h2 {
 #click-me-gig {
   color: $HOT-PINK;
   @include click-me;
-  font-size: 18vh;
+  font-size: 16vh;
 }
 
 #click-me-coughing {
@@ -80,7 +80,7 @@ h1, h2 {
   color: $TEAL-DEER;
   @include click-me;
   font-family:'Courier New', monospace
-  font-size: 18.5vh;
+  font-size: 15vh;
 }
 
 @media only screen and (max-width: 768px) {
