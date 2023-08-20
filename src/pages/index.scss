@@ -35,7 +35,7 @@ body {
 }
 
 @mixin click-me {
-  font-size: 16h;
+  font-size: 16vh;
   cursor: pointer;
   user-select: none;
   white-space: wrap;
@@ -93,8 +93,11 @@ h1, h2 {
     font-weight: bold;
     white-space: pre-wrap;
   }
-  #click-me-gig, #click-me-coughing {
+  #click-me-gig {
     font-size: 13vh;
+  }
+  #click-me-coughing {
+    font-size: 10vh;
   }
   #click-me-nut {
     font-size: 20vh;
