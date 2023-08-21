@@ -3,6 +3,7 @@ $CREAM-YELLO: #FFFDD0;
 $CREAM-WHITE: #FAEED5;
 $TEAL-DEER: #99E6B3;
 $HOT-PINK: #EF7C8E;
+$DARK-WOODS: #0a1202;
 
 $TEXT-COLOR: $CREAM-WHITE;
 $FONT: Courier;
@@ -83,6 +84,13 @@ h1, h2 {
   font-size: 18.5vh;
 }
 
+#click-me-ipa {
+  color: $DARK-WOODS;
+  @include click-me;
+  // font-family:monospace;
+  font-size: 18.5vh;
+}
+
 @media only screen and (max-width: 768px) {
 
   #outer {
@@ -96,6 +104,9 @@ h1, h2 {
     white-space: pre-wrap;
   }
   #click-me-gig {
+    font-size: 99px;
+  }
+  #click-me-ipa {
     font-size: 99px;
   }
   #click-me-nut {
