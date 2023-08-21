@@ -84,11 +84,12 @@ h1, h2 {
 }
 
 @media only screen and (max-width: 768px) {
+
   #outer {
     margin: 0;
   }
   #click-me-header {
-    font-size: 125px
+    font-size: 111px
   }
   .click-me {
     font-family:monospace;
@@ -96,12 +97,12 @@ h1, h2 {
     white-space: pre-wrap;
   }
   #click-me-gig {
-    font-size: 89px;
+    font-size: 79px;
   }
   #click-me-nut {
-    font-size: 89px;
+    font-size: 79px;
   }
   #click-me-coughing {
-    font-size:69px;
+    font-size:59px;
   }
 }
