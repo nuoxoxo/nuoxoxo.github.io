@@ -79,7 +79,7 @@ h1, h2 {
 #click-me-nut {
   color: $TEAL-DEER;
   @include click-me;
-  font-family:'Courier New', monospace;
+  font-family:monospace;
   font-size: 18.5vh;
 }
 
