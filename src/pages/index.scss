@@ -87,6 +87,9 @@ h1, h2 {
   #outer {
     margin: 0;
   }
+  #click-me-header {
+    font-size: 16vh
+  }
   .click-me {
     font-size: 155px;
     font-family:monospace;
@@ -94,10 +97,10 @@ h1, h2 {
     white-space: pre-wrap;
   }
   #click-me-gig {
-    font-size: 15vh;
+    font-size: 14vh;
   }
   #click-me-nut {
-    font-size: 15vh;
+    font-size: 14vh;
   }
   #click-me-coughing {
     font-size: 9vh;
