@@ -79,7 +79,7 @@ h1, h2 {
 #click-me-nut {
   color: $TEAL-DEER;
   @include click-me;
-  font-family:monospace;
+  // font-family:monospace;
   font-size: 18.5vh;
 }
 
@@ -92,17 +92,16 @@ h1, h2 {
     font-size: 111px
   }
   .click-me {
-    font-family:monospace;
     font-weight: bold;
     white-space: pre-wrap;
   }
   #click-me-gig {
-    font-size: 89px;
+    font-size: 99px;
   }
   #click-me-nut {
-    font-size: 70px;
+    font-size: 96px;
   }
   #click-me-coughing {
-    font-size:69px;
+    font-size:71px;
   }
 }
