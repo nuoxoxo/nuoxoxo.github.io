@@ -49,12 +49,12 @@ h1, h2 {
 
 #outer {
   height: 77vh;
-  //display: grid;
-  //place-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content:center;
+  //align-items: center;
   @include margin-LR;
 }
 
