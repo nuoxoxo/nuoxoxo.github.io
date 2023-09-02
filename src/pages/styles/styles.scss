@@ -51,6 +51,10 @@ h1, h2 {
   height: 77vh;
   display: grid;
   place-items: center;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content:center;
+  //align-items: center;
   @include margin-LR;
 }
 
