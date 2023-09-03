@@ -4,6 +4,7 @@ $CREAM-WHITE: #FAEED5;
 $TEAL-DEER: #99E6B3;
 $HOT-PINK: #EF7C8E;
 $DARK-WOODS: #99BBAA;
+$DEAD-LAKE-GREEN: #B7F389;
 
 $TEXT-COLOR: $CREAM-WHITE;
 $FONT: Courier;
@@ -95,6 +96,12 @@ h1, h2 {
   font-size: 18.5vh;
 }
 
+#click-me-dmd {
+  font-size: 18.2vh;
+  color: $DEAD-LAKE-GREEN;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 @media only screen and (max-width: 768px) {
 
   #outer {
@@ -114,6 +121,9 @@ h1, h2 {
     font-size: 99px;
   }
   #click-me-nut {
+    font-size: 96px;
+  }
+  #click-me-dmd {
     font-size: 96px;
   }
   #click-me-coughing {
