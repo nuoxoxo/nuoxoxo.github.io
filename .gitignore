@@ -1,9 +1,7 @@
 *sandbox/*.js
-*/public/*
 !*/public/index.html
 *ts/src/*.js
 *.eslintrc.cjs
-
 
 # dependencies
 /node_modules
