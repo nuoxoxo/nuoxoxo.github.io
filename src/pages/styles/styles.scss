@@ -10,19 +10,24 @@ $TEXT-COLOR: $CREAM-WHITE;
 $FONT: Courier;
 $BG-COLOR: #000000;
 
+
 body {
+
   background-color: $BG-COLOR;
   font-family: $FONT;
   color: $TEXT-COLOR;
 }
 
+
 @keyframes rainbow-rotate {
+
   from {
     filter: hue-rotate(0deg);
   } to {
     filter: hue-rotate(360deg);
   }
 }
+
 
 @mixin animation-rainbow-rotate {
 
@@ -31,12 +36,16 @@ body {
   // animation-direction: alternate;
 }
 
+
 @mixin margin-LR {
+
   margin-right: 10%;
   margin-left: 10%;
 }
 
+
 @mixin click-me {
+
   font-size: 16vh;
   cursor: pointer;
   user-select: none;
@@ -44,11 +53,15 @@ body {
   @include animation-rainbow-rotate;
 }
 
+
 h1, h2 {
+
   margin: 0;
 }
 
+
 #outer {
+
   height: 77vh;
   display: grid;
   place-items: center;
@@ -59,22 +72,30 @@ h1, h2 {
   @include margin-LR;
 }
 
+
 .click-me {
+
   @include click-me
 }
 
+
 #click-me-header {
+
   color: $WATER-GREEN;
   font-size: 17vh;
 }
 
+
 #click-me-gig {
+
   color: $HOT-PINK;
   @include click-me;
   font-size: 18vh;
 }
 
+
 #click-me-coughing {
+
   // font-size: 23px;
   color: $CREAM-YELLO;
   @include click-me;
@@ -82,21 +103,27 @@ h1, h2 {
   font-size: 13vh;
 }
 
+
 #click-me-nut {
+
   color: $TEAL-DEER;
   @include click-me;
   // font-family:monospace;
   font-size: 18.5vh;
 }
 
+
 #click-me-ipa {
+
   color: $DARK-WOODS;
   @include click-me;
   // font-family:monospace;
   font-size: 18.5vh;
 }
 
+
 #click-me-dmd {
+
   font-size: 15.6vh;
   color: $DEAD-LAKE-GREEN;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -105,30 +132,38 @@ h1, h2 {
   }
 }
 
+
 @media only screen and (max-width: 768px) {
 
   #outer {
     margin: 0;
   }
+
   #click-me-header {
     font-size: 111px
   }
+
   .click-me {
     font-weight: bold;
     white-space: pre-wrap;
   }
+
   #click-me-gig {
     font-size: 99px;
   }
+
   #click-me-ipa {
     font-size: 99px;
   }
+
   #click-me-nut {
     font-size: 96px;
   }
+
   #click-me-dmd {
     font-size: 69px;
   }
+
   #click-me-coughing {
     font-size:71px;
   }
